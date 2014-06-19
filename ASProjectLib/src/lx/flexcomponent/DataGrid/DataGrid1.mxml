@@ -9,6 +9,7 @@
 				{Artist:'Pavement', Album:'Slanted and Enchanted', Price:11.99}, 
 				{Artist:'Pavement', Album:'Brighten the Corners', Price:11.99}]; 
 			
+			//使用Bindable关键字的写法
 			[Bindable] 
 			public var initDG:ArrayCollection; 
 			

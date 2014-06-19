@@ -155,6 +155,11 @@
     <classEntry path="configs.flexcomponentconfig.DataGrid_aggregation"/>
     <classEntry path="lx.flexcomponent.ApplicationControlBar.ApplicationControlBar1"/>
     <classEntry path="configs.flexcomponentconfig.ApplicationControlBar_aggregation"/>
+    <classEntry path="lx.flexcomponent.DataGrid.DataGrid2"/>
+    <classEntry path="lx.flexcomponent.DataGrid.DataGrid3"/>
+    <classEntry path="lx.flexcomponent.DataGrid.DataGrid4"/>
+    <classEntry path="lx.flexcomponent.DataGrid.DataGrid5"/>
+    <classEntry path="lx.flexcomponent.DataGrid.DataGrid6"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

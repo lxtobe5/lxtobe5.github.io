@@ -1,0 +1,5 @@
+DataGrid1.mxml : [Bindable] 的使用，Array包含Object作为数据类型
+DataGrid2.mxml : DataGrid内部元素mxml标签的写法
+DataGrid3.mxml : 用XMLListConllection为DataGrid提供数据
+DataGrid4.mxml : XML、XMLList、XMLListCollection、ArrayCollection关系转换
+DataGrid4.mxml : 用DataItem赋值数据
