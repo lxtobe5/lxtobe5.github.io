@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+ <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+<title>ASProject English Help</title>
+</head>
+
+<body>
+<h3 align="center">ASProject Introduce</h3>
+<table width="100%" border="0">
+  <tr>
+    <td width="128"><img src="images/ASProject.jpg" width="128" height="128" alt=""/></td>
+    <td>ASProject current v1.0.0<br>
+    ASProjectLib current v1.0.0，use Flex SDK 4.12.1compile，use AIR SDK13.0<br><br>
+    Donate：<br>
+    1.Alipay：lxtobe5@qq.com<br>
+    2.Paypal：lxtobe5@gmail.com
+  </tr>
+</table>
+<p>This is an ActionScript3 project,for showing instance，just like TourDeFlex，buhave more freedom，do a job like partner of developer.Instances from Web or myself, please downloadASProjectLib，modify the instance on local，welcome to share your instances，please contact to lxtobe5@gmail.com.</p>
+<p>1.Download and install the ASProject.exe(User of Win8 shouldn't install into system disk，in order to prevent the files and folders permissions interferes with normal use)</p>
+<p>2.Download the ASProjectLib，which is a Flex library project，import to Flash Builder，attention to use Flex SDK and AIR SDK with the same to introduce</p>
+<p><img src="images/pic1.jpg" width="204" height="199" alt=""/></p>
+<p>3.Open the ASProject.exe，Select your language（English/中文），then modify the config</p>
+<p><img src="images/p2_en.jpg" width="884" height="224" alt=""/></p>
+<p>4.For the first time to use，double click the instance of API directory，it will be open Adobe website of API </p>
+<p><img src="images/p3.jpg" width="854" height="217" alt=""/></p>
+<p>&nbsp;</p>
+<p>5.Extension(ASProjectLib)</p>
+<p>Only for package "API"，According to the simple naming rules to create a new instance file,use the word "method" for middle name about API Function，use the word "attribute" for middle name about API attribute，all class extend Output，override write method of "run" and "dispose"，finished，add class "XXX_aggregation"(extends Array) in package config.apiconfig，add class of your instance to "XXX_aggregation" ，last,add class "XXX_aggregation" into class "ClassConfig"。Compile to SWC with Flash Builder，in ASProject，click the "refresh" button，you can look up the result。</p>
+<p><img src="images/p4.jpg" width="632" height="401" alt=""/></p>
+<p><img src="images/p5_en.jpg" width="263" height="144" alt=""/></p>
+<p>&nbsp;</p>
+<p>For instance of package "flexcomponent"，extend class "OutputSpark"，the same to up。</p>
+<p>6.About Instance</p>
+<p>For extend class "Output"，override write method "run" and "dispose"，output the text result with method "traceString"，output the pattern with method "tracePattern"</p>
+<p>For extend class "OutputSpark"，override write method "run" and "dispose"，only output the text result with method "traceString"</p>
+</body>
+</html>
