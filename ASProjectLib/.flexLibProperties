@@ -160,6 +160,10 @@
     <classEntry path="lx.flexcomponent.DataGrid.DataGrid4"/>
     <classEntry path="lx.flexcomponent.DataGrid.DataGrid5"/>
     <classEntry path="lx.flexcomponent.DataGrid.DataGrid6"/>
+    <classEntry path="lx.flexcomponent.DataGrid.DataGrid7"/>
+    <classEntry path="lx.flexcomponent.DataGrid.DataGrid8"/>
+    <classEntry path="lx.flexcomponent.DataGrid.DataGrid9"/>
+    <classEntry path="lx.flexcomponent.DataGrid.DataGrid10"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
