@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*" width="100%" height="100%">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.core.DragSource;
+			import mx.events.DragEvent;
+			import mx.managers.DragManager;
+			
+			import spark.events.GridEvent;
+			[Bindable]  
+			private var testData:ArrayCollection = new ArrayCollection([  
+				{name:"测试一", type:"类型" , flag:"标志一"},  
+				{name:"测试二", type:"类型" , flag:"标志二"}
+			]);
+			
+			protected function dg_dragStartHandler(event:DragEvent):void
+			{
+				traceString("start");
+			}
+			
+			protected function dg_dragDropHandler(event:DragEvent):void
+			{
+				traceString("drop");
+			}
+			
+			protected function dg_dragOverHandler(event:DragEvent):void
+			{
+				traceString("over");
+			}
+			
+			protected function dg_dragEnterHandler(event:DragEvent):void
+			{
+				traceString("enter");
+			}
+			
+			protected function dg_dragCompleteHandler(event:DragEvent):void
+			{
+				traceString("complete");
+				var point:Point = globalToLocal(new Point(stage.mouseX,stage.mouseY));
+				dg.x = point.x;
+				dg.y = point.y;
+			}
+			
+			protected function dg_dragExitHandler(event:DragEvent):void
+			{
+				traceString("exit");
+			}
+			
+			protected function dg_gridMouseDragHandler(event:GridEvent):void
+			{
+				traceString("griddrag");
+			}
+			
+			protected function dg_mouseMoveHandler(event:MouseEvent):void
+			{
+				var ds:DragSource = new DragSource();
+				DragManager.doDrag(dg, ds, event);
+			}
+			
+		]]>
+	</fx:Script>
+	<!--DataGrid单元格gridMouseDrag事件-->
+	<s:DataGrid id="dg" x="10" y="10" width="276" dataProvider="{testData}"
+				dragStart="dg_dragStartHandler(event)" 
+				dragDrop="dg_dragDropHandler(event)"
+				dragOver="dg_dragOverHandler(event)"
+				dragEnter="dg_dragEnterHandler(event)"
+				dragComplete="dg_dragCompleteHandler(event)"
+				dragExit="dg_dragExitHandler(event)"
+				gridMouseDrag="dg_gridMouseDragHandler(event)"
+				mouseMove="dg_mouseMoveHandler(event)"
+				requestedRowCount="4" editable="true">
+		<s:columns>
+			<mx:ArrayList>
+				<s:GridColumn dataField="name" headerText="名称" editable="true"></s:GridColumn>
+				<s:GridColumn dataField="type" headerText="类型"></s:GridColumn>
+				<s:GridColumn dataField="flag" headerText="是否可编辑"></s:GridColumn>
+			</mx:ArrayList>
+		</s:columns>
+	</s:DataGrid>
+</local:OutputSpark>

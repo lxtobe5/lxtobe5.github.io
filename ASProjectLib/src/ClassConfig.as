@@ -10,6 +10,7 @@ package
 	import configs.apiconfig.String_aggregation;
 	import configs.apiconfig.XML_aggregation;
 	import configs.flexcomponentconfig.ApplicationControlBar_aggregation;
+	import configs.flexcomponentconfig.DataGridExtend_aggregation;
 	import configs.flexcomponentconfig.DataGrid_aggregation;
 	import configs.flexcomponentconfig.FileSystemTree_aggregation;
 
@@ -38,6 +39,7 @@ package
 			_arg.push(
 				ApplicationControlBar_aggregation,
 				DataGrid_aggregation,
+				DataGridExtend_aggregation,
 				FileSystemTree_aggregation
 				);
 		}

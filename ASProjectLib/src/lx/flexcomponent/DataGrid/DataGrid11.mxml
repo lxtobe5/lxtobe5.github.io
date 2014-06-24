@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*" width="100%" height="100%">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			[Bindable]  
+			private var testData:ArrayCollection = new ArrayCollection([  
+				{name:"测试一", type:"类型" , flag:"标志一"},  
+				{name:"测试二", type:"类型" , flag:"标志二"}
+			]);
+			
+			protected function confrim_clickHandler(event:MouseEvent):void
+			{
+				var obj:Object = {name:chName.text,type:chType.text,flag:chFlag.text};
+				dg.dataProvider.addItem(obj);
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<!--可添加或删除记录-->
+	<s:DataGrid id="dg" x="10" y="10" width="276" dataProvider="{testData}"
+				requestedRowCount="4" editable="true">
+		<s:columns>
+			<mx:ArrayList>
+				<s:GridColumn dataField="name" headerText="名称" editable="true"></s:GridColumn>
+				<s:GridColumn dataField="type" headerText="类型"></s:GridColumn>
+				<s:GridColumn dataField="flag" headerText="是否可编辑"></s:GridColumn>
+			</mx:ArrayList>
+		</s:columns>
+	</s:DataGrid>
+	
+	<s:Form x="305" y="9"> 
+		<s:FormItem label="添加名称:"> 
+			<s:TextInput id="chName"/>
+		</s:FormItem> 
+		<s:FormItem label="添加类型:"> 
+			<s:TextInput id="chType"/> 
+		</s:FormItem> 
+		<s:FormItem label="添加标志:"> 
+			<s:TextInput id="chFlag"/>
+		</s:FormItem> 
+		<s:Button id="confrim" label="添加纪录" click="confrim_clickHandler(event)"/>
+	</s:Form> 
+</local:OutputSpark>

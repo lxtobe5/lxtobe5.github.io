@@ -32,7 +32,7 @@ package lx.api.flash.display.Graphics
 			loader = new URLLoader(); 
 			loader.dataFormat = URLLoaderDataFormat.BINARY; 
 			loader.addEventListener(Event.COMPLETE, onLoadComplete); 
-			loader.load(new URLRequest("resource/ThreePointGradient.pbj")); 
+			loader.load(new URLRequest(resource+"/ThreePointGradient.pbj")); 
 		}
 		
 		private function onLoadComplete(event:Event):void 

@@ -164,6 +164,11 @@
     <classEntry path="lx.flexcomponent.DataGrid.DataGrid8"/>
     <classEntry path="lx.flexcomponent.DataGrid.DataGrid9"/>
     <classEntry path="lx.flexcomponent.DataGrid.DataGrid10"/>
+    <classEntry path="lx.flexcomponent.DataGrid.DataGrid11"/>
+    <classEntry path="lx.flexcomponent.DataGrid.DataGrid12"/>
+    <classEntry path="lx.flexcomponent.DataGrid.DataGrid13"/>
+    <classEntry path="lx.flexcomponent.DataGridExtend.DataGridExtend1"/>
+    <classEntry path="configs.flexcomponentconfig.DataGridExtend_aggregation"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

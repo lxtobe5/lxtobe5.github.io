@@ -34,7 +34,7 @@
 	<fx:Declarations>
 		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
 	</fx:Declarations>
-	<!--selectionChange和caretChange事件处理-->
+	<!--caretChange事件处理-->
 	<s:DataGrid id="dg" x="10" y="10" width="276" dataProvider="{testData}" caretChange="caretChangeHandler(event)"
 				requestedRowCount="4" editable="true">
 		<s:columns>

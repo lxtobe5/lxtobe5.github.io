@@ -2,6 +2,9 @@ package configs.flexcomponentconfig
 {
 	import lx.flexcomponent.DataGrid.DataGrid1;
 	import lx.flexcomponent.DataGrid.DataGrid10;
+	import lx.flexcomponent.DataGrid.DataGrid11;
+	import lx.flexcomponent.DataGrid.DataGrid12;
+	import lx.flexcomponent.DataGrid.DataGrid13;
 	import lx.flexcomponent.DataGrid.DataGrid2;
 	import lx.flexcomponent.DataGrid.DataGrid3;
 	import lx.flexcomponent.DataGrid.DataGrid4;
@@ -31,7 +34,10 @@ package configs.flexcomponentconfig
 				DataGrid7,
 				DataGrid8,
 				DataGrid9,
-				DataGrid10
+				DataGrid10,
+				DataGrid11,
+				DataGrid12,
+				DataGrid13
 				);
 		}
 	}
