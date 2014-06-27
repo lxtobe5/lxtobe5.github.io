@@ -169,6 +169,8 @@
     <classEntry path="lx.flexcomponent.DataGrid.DataGrid13"/>
     <classEntry path="lx.flexcomponent.DataGridExtend.DataGridExtend1"/>
     <classEntry path="configs.flexcomponentconfig.DataGridExtend_aggregation"/>
+    <classEntry path="lx.api.flash.display.Loader.Loader_method_load"/>
+    <classEntry path="configs.apiconfig.Loader_aggregation"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

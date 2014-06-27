@@ -4,6 +4,7 @@ package
 	import configs.apiconfig.BitmapData_aggregation;
 	import configs.apiconfig.Function_aggregation;
 	import configs.apiconfig.Graphics_aggregation;
+	import configs.apiconfig.Loader_aggregation;
 	import configs.apiconfig.Matrix_aggregation;
 	import configs.apiconfig.Object_aggregation;
 	import configs.apiconfig.Shader_aggregation;
@@ -29,6 +30,7 @@ package
 				BitmapData_aggregation,
 				Function_aggregation,
 				Graphics_aggregation,
+				Loader_aggregation,
 				Matrix_aggregation,
 				Object_aggregation,
 				Shader_aggregation,
