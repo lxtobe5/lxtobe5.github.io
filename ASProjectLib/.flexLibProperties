@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="false" useMultiPlatformConfig="false" version="3">
   <includeClasses>
-    <classEntry path="ClassConfig"/>
     <classEntry path="Output"/>
-    <classEntry path="configs.apiconfig.Array_aggregation"/>
     <classEntry path="lx.api.Array.Array_method_concat"/>
     <classEntry path="lx.api.Array.Array_method_every"/>
     <classEntry path="lx.api.Array.Array_method_filter"/>
@@ -23,7 +21,6 @@
     <classEntry path="lx.api.Array.Array_method_splice"/>
     <classEntry path="lx.api.Array.Array_method_unshift"/>
     <classEntry path="lx.api.flash.display.BitmapData.BitmapData_method_applyFilter"/>
-    <classEntry path="configs.apiconfig.BitmapData_aggregation"/>
     <classEntry path="lx.api.flash.display.BitmapData.BitmapData_method_BitmapData"/>
     <classEntry path="lx.api.flash.display.BitmapData.BitmapData_method_colorTransform"/>
     <classEntry path="lx.api.flash.display.BitmapData.BitmapData_method_compare"/>
@@ -45,7 +42,6 @@
     <classEntry path="lx.api.flash.display.BitmapData.BitmapData_method_hitTest"/>
     <classEntry path="lx.api.flash.display.BitmapData.BitmapData_method_lock"/>
     <classEntry path="lx.api.flash.display.BitmapData.BitmapData_method_merge"/>
-    <classEntry path="configs.apiconfig.XML_aggregation"/>
     <classEntry path="lx.api.XML.XML_method_addNamespace"/>
     <classEntry path="lx.api.XML.XML_method_appendChild"/>
     <classEntry path="lx.api.XML.XML_method_attribute"/>
@@ -83,9 +79,7 @@
     <classEntry path="lx.api.XML.XML_method_setNamespace"/>
     <classEntry path="lx.api.XML.XML_method_setSettings"/>
     <classEntry path="lx.api.Function.Function_method_apply"/>
-    <classEntry path="configs.apiconfig.Function_aggregation"/>
     <classEntry path="lx.api.Function.Function_method_call"/>
-    <classEntry path="configs.apiconfig.String_aggregation"/>
     <classEntry path="lx.api.String.String_method_charAt"/>
     <classEntry path="lx.api.String.String_method_charCodeAt"/>
     <classEntry path="lx.api.String.String_method_concat"/>
@@ -93,9 +87,7 @@
     <classEntry path="lx.api.String.String_method_lastIndexOf"/>
     <classEntry path="lx.flexcomponent.FileSystemTree.FileSystemTree1"/>
     <classEntry path="OutputSpark"/>
-    <classEntry path="configs.flexcomponentconfig.FileSystemTree_aggregation"/>
     <classEntry path="lx.flexcomponent.Tree.Tree1"/>
-    <classEntry path="configs.flexcomponentconfig.Tree_aggregation"/>
     <classEntry path="lx.api.String.String_method_localeCompare"/>
     <classEntry path="lx.api.String.String_method_match"/>
     <classEntry path="lx.api.String.String_method_replace"/>
@@ -109,7 +101,6 @@
     <classEntry path="lx.api.String.String_method_toLowerCase"/>
     <classEntry path="lx.api.String.String_method_toUpperCase"/>
     <classEntry path="lx.api.String.String_static_method_fromCharCode"/>
-    <classEntry path="configs.apiconfig.Matrix_aggregation"/>
     <classEntry path="lx.api.flash.geom.Matrix.Matrix_method_concat"/>
     <classEntry path="lx.api.flash.geom.Matrix.Matrix_method_copyFrom"/>
     <classEntry path="lx.api.flash.geom.Matrix.Matrix_method_createBox"/>
@@ -123,11 +114,9 @@
     <classEntry path="lx.api.flash.geom.Matrix.Matrix_method_setTo"/>
     <classEntry path="lx.api.flash.geom.Matrix.Matrix_method_transformPoint"/>
     <classEntry path="lx.api.flash.geom.Matrix.Matrix_method_translate"/>
-    <classEntry path="configs.apiconfig.Graphics_aggregation"/>
     <classEntry path="lx.api.flash.display.Graphics.Graphics_method_beginBitmapFill"/>
     <classEntry path="lx.api.flash.display.Graphics.Graphics_method_beginFill"/>
     <classEntry path="lx.api.flash.display.Graphics.Graphics_method_beginGradientFill"/>
-    <classEntry path="configs.apiconfig.Shader_aggregation"/>
     <classEntry path="lx.api.flash.display.Shader.Shader_method_Shader"/>
     <classEntry path="lx.api.flash.display.Graphics.Graphics_method_beginShaderFill"/>
     <classEntry path="lx.api.flash.display.Graphics.Graphics_method_copyFrom"/>
@@ -149,12 +138,9 @@
     <classEntry path="lx.api.flash.display.Graphics.Graphics_method_moveTo"/>
     <classEntry path="lx.api.flash.display.Graphics.Graphics_method_readGraphicsData"/>
     <classEntry path="lx.api.Object.Object_attribute_constructor"/>
-    <classEntry path="configs.apiconfig.Object_aggregation"/>
     <classEntry path="lx.api.Object.Object_static_attribute_prototype"/>
     <classEntry path="lx.flexcomponent.DataGrid.DataGrid1"/>
-    <classEntry path="configs.flexcomponentconfig.DataGrid_aggregation"/>
     <classEntry path="lx.flexcomponent.ApplicationControlBar.ApplicationControlBar1"/>
-    <classEntry path="configs.flexcomponentconfig.ApplicationControlBar_aggregation"/>
     <classEntry path="lx.flexcomponent.DataGrid.DataGrid2"/>
     <classEntry path="lx.flexcomponent.DataGrid.DataGrid3"/>
     <classEntry path="lx.flexcomponent.DataGrid.DataGrid4"/>
@@ -168,9 +154,8 @@
     <classEntry path="lx.flexcomponent.DataGrid.DataGrid12"/>
     <classEntry path="lx.flexcomponent.DataGrid.DataGrid13"/>
     <classEntry path="lx.flexcomponent.DataGridExtend.DataGridExtend1"/>
-    <classEntry path="configs.flexcomponentconfig.DataGridExtend_aggregation"/>
     <classEntry path="lx.api.flash.display.Loader.Loader_method_load"/>
-    <classEntry path="configs.apiconfig.Loader_aggregation"/>
+    <classEntry path="lx.api.Math.Math_static_method_sin"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
