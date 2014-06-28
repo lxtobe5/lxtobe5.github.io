@@ -156,6 +156,11 @@
     <classEntry path="lx.flexcomponent.DataGridExtend.DataGridExtend1"/>
     <classEntry path="lx.api.flash.display.Loader.Loader_method_load"/>
     <classEntry path="lx.api.Math.Math_static_method_sin"/>
+    <classEntry path="lx.api.Math.Math_static_method_cos"/>
+    <classEntry path="lx.api.Math.Math_static_method_acos"/>
+    <classEntry path="lx.api.Math.Math_static_method_asin"/>
+    <classEntry path="lx.api.Math.Math_static_method_atan"/>
+    <classEntry path="lx.api.Math.Math_static_method_atan2"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
