@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*" width="100%" height="100%">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			
+			import spark.components.Grid;
+			import spark.events.GridCaretEvent;
+			
+			[Bindable]  
+			private var testData:ArrayCollection = new ArrayCollection([  
+				{name:"测试一", type:"类型" , flag:"标志一"},  
+				{name:"测试二", type:"类型" , flag:"标志二"},
+				{name:"测试三", type:"类型" , flag:"标志三"},
+				{name:"测试四", type:"类型" , flag:"标志四"}
+			]);
+			
+			protected function caretChangeHandler(event:GridCaretEvent):void {
+				const eventGrid:Grid = event.currentTarget.grid;
+				selLabel.text = "选择的行: " + 
+					String(eventGrid.selectedIndex); 
+				caretLabel.text = "插入行: " + 
+					String(eventGrid.caretRowIndex); 
+				
+				oldRowIndex.text = "旧行："+event.oldRowIndex;
+				oldColumnIndex.text = "旧列："+event.oldColumnIndex;
+				newRowIndex.text = "新行："+event.newRowIndex;
+				newColumnIndex.text = "新列："+event.newColumnIndex;
+			}
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<!--caretChange事件处理-->
+	<s:DataGrid id="dg" x="10" y="10" width="276" dataProvider="{testData}" caretChange="caretChangeHandler(event)"
+				requestedRowCount="4" editable="true">
+		<s:columns>
+			<mx:ArrayList>
+				<s:GridColumn dataField="name" headerText="名称" editable="true"></s:GridColumn>
+				<s:GridColumn dataField="type" headerText="类型"></s:GridColumn>
+				<s:GridColumn dataField="flag" headerText="是否可编辑"></s:GridColumn>
+			</mx:ArrayList>
+		</s:columns>
+	</s:DataGrid>
+	
+	<s:Label id="oldRowIndex" x="22" y="154"/> 
+	<s:Label id="oldColumnIndex" x="22" y="187"/> 
+	<s:Label id="newRowIndex" x="22" y="220"/> 
+	<s:Label id="newColumnIndex" x="22" y="253"/> 
+	<s:Label id="selLabel" x="22" y="386"/> 
+	<s:Label id="caretLabel" x="22" y="419"/> 
+</local:OutputSpark>

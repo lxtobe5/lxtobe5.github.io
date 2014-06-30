@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*" width="100%" height="100%">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.collections.XMLListCollection;
+			public var myData:XML=  
+				<tables>  
+					<table>  
+						<name>TRP_USERS</name>  
+						<statement>CREATE TABLE IF NOT EXISTS TRP_USERS (USER_ID INTEGER PRIMARY KEY AUTOINCREMENT,USER_NAME TEXT,PASSWORD TEXT,CREATION_DATE DATE)</statement>  
+					</table>  
+					<table>  
+						<name>TRP_PROJECTS</name>  
+						<statement>CREATE TABLE IF NOT EXISTS TRP_EMPLOYEE_PROJECTS (EMPLOYEE_PROJECT_ID INTEGER PRIMARY KEY AUTOINCREMENT,USER_ID INTEGER,EMPLOYEE_NUMBER TEXT,LEVEL_CODE TEXT,PROJECT_NAME TEXT,PROJECT_MANAGER TEXT,START_DATE DATE,SCHEDULE_END_DATE DATE,TECH_DIRECTOR_NAME TEXT,TECH_LEADER_NAME TEXT,TWO_WEEK_OUT TEXT,MEMO TEXT,UPLOAD_FLAG TEXT,CREATION_DATE DATE)</statement>  
+					</table>  
+				</tables>;  
+			private var xmlList:XMLList=new XMLList();  
+			private var xmlListCollection:XMLListCollection=new XMLListCollection();  
+			private var provider:ArrayCollection;  
+			private function init():void  
+			{  
+				xmlList=myData.elements("table");  
+				xmlListCollection.source=xmlList;  
+				provider=new ArrayCollection(xmlListCollection.toArray());  
+				grid.dataProvider=provider;  
+			}  
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<s:DataGrid id="grid" x="10" y="10" width="476" requestedRowCount="4" initialize="init()">
+		<s:columns>
+			<mx:ArrayList>
+				<s:GridColumn dataField="name" headerText="Name"></s:GridColumn>
+				<s:GridColumn dataField="statement" headerText="Sql"></s:GridColumn>
+			</mx:ArrayList>
+		</s:columns>
+		<mx:ArrayList></mx:ArrayList>
+	</s:DataGrid>
+</local:OutputSpark>

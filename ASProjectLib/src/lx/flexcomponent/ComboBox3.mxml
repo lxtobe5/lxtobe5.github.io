@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*">
+	<fx:Script>
+		<![CDATA[
+			import spark.events.IndexChangeEvent;
+			
+			// Define a custom function for the labelFunction property
+			// to display an Object in the ComboBox control.
+			public function myLabelFunc(item:Object):String {
+				return item.firstName + " " + item.lastName; 
+			}
+			
+			// Define a custom function for the labelToItemFunction property
+			// to convert the new value to an Object of the correct format
+			// for storage in the data provider of the control.
+			public function myLabelToItemFunc(value:String):Object {
+				var tempObj:Object = new Object();
+				var spaceChar:int = value.indexOf(' ');                
+				tempObj.firstName = value.substr(0, spaceChar);
+				tempObj.lastName = value.substr(spaceChar+1, value.length);
+				return tempObj;
+			}            
+			
+			// Event handler to determine if the selected item is new.
+			protected function myCB_changeHandler(event:IndexChangeEvent):void
+			{
+				// Determine if the index specifies a new data item.
+				if(myCB.selectedIndex == spark.components.ComboBox.CUSTOM_SELECTED_ITEM)
+					// Add the new item to the data provider.
+					myCB.dataProvider.addItem(myCB.selectedItem);
+			}
+		]]>
+	</fx:Script>
+	<s:VGroup width="100%" height="100%" >
+		<s:Label text="The selected index is: {myCB.selectedIndex}"/>
+		<s:Label text="The selected item is: {myCB.selectedItem.firstName + ' ' 
+				 + myCB.selectedItem.lastName}"/>
+		
+		<s:ComboBox id="myCB" width="140" 
+					labelFunction="myLabelFunc"
+					labelToItemFunction="myLabelToItemFunc"
+					change="myCB_changeHandler(event);"> 
+			<s:dataProvider>
+				<mx:ArrayList>
+					<fx:Object firstName="Steve" lastName="Smith"/>
+					<fx:Object firstName="John" lastName="Jones"/>
+					<fx:Object firstName="Mary" lastName="Moore"/>
+				</mx:ArrayList>
+			</s:dataProvider>
+		</s:ComboBox>
+	</s:VGroup>  
+	
+</local:OutputSpark>

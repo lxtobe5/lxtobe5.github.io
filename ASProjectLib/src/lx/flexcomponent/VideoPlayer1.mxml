@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*">
+	<fx:Script>
+		<![CDATA[
+			import org.osmf.events.MediaPlayerStateChangeEvent;
+			import org.osmf.events.TimeEvent;
+			
+			protected function vpCompleteHandler(event:TimeEvent):void {
+				myTA.text = "Video complete - restarting."
+			}
+			
+			protected function vpMediaPlayerStateChangeHandler(event:MediaPlayerStateChangeEvent):void {
+				if (event.state == "loading")
+					myTA.text = "loading ...";
+				if (event.state == "playing")
+					myTA.text = "playing ...";
+			}
+			
+		]]>
+	</fx:Script>
+	<s:VGroup width="100%" height="100%" >
+		<s:VideoPlayer 
+			source="rtmp://fmsexamples.adobe.com/vod/mp4:_cs4promo_1000.f4v"
+			width="350" height="250"
+			loop="true"
+			complete="vpCompleteHandler(event);"
+			mediaPlayerStateChange="vpMediaPlayerStateChangeHandler(event);"/>
+		<s:TextArea id="myTA" width="350" height="25"/>
+	</s:VGroup>  
+</local:OutputSpark>

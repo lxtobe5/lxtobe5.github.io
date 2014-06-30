@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*">
+	<fx:Script>
+		<![CDATA[
+			import mx.events.ColorPickerEvent;
+			import mx.events.DropdownEvent;
+			
+			[Bindable]
+			public var complexDPArray:Array = [
+				{label:"Yellow", color:"0xFFFF00", 
+					descript:"A bright, light color."}, 
+				{label:"Hot Pink", color:"0xFF66CC", 
+					descript:"It's HOT!"}, 
+				{label:"Brick Red", color:"0x990000", 
+					descript:"Goes well with warm colors."}, 
+				{label:"Navy Blue", color:"0x000066", 
+					descript:"The conservative favorite."}, 
+				{label:"Forest Green", color:"0x006600", 
+					descript:"Great outdoorsy look."}, 
+				{label:"Grey", color:"0x666666", 
+					descript:"An old reliable."}]
+			
+			public function openEvt(event:DropdownEvent):void {
+				descriptBox.text="";
+			}
+			
+			public function changeEvt(event:ColorPickerEvent):void {
+				descriptBox.text=event.currentTarget.selectedItem.label
+					+ ": " + event.currentTarget.selectedItem.descript; 
+			}
+		]]>    
+	</fx:Script>
+	
+		<fx:Style>
+		.myStyle {
+			swatchWidth:25;
+			swatchHeight:25;
+			textFieldWidth:95;
+		}    
+	</fx:Style>
+	
+	<!-- Convert the Array to an ArrayCollection. Do this if 
+	you might change the colors in the panel dynamically. -->
+	<fx:Declarations>
+		<mx:ArrayCollection id="complexDP" source="{complexDPArray}"/>
+	</fx:Declarations>
+	<mx:VBox>
+		<s:TextArea id="descriptBox" 
+					 width="150" height="50"/>
+		<mx:ColorPicker id="cp" 
+						height="50" width="150"
+						dataProvider="{complexDP}" 
+						change="changeEvt(event);" 
+						open="openEvt(event);" 
+						editable="false"/>      
+	</mx:VBox>
+</local:OutputSpark>

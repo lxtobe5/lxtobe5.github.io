@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*" width="100%" height="100%">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			
+			private function initApp():void {
+				srclist.dataProvider = 
+					new ArrayCollection(['Reading', 'Television', 'Movies']);
+				destlist.dataProvider = new ArrayCollection([]);
+			}
+		]]>
+	</fx:Script>
+	<!--List拖拽-->
+	<s:HGroup>
+		<s:VGroup>
+			<s:Label text="Available Activities"/>
+			<s:List id="srclist" 
+					allowMultipleSelection="true"
+					dragEnabled="true"
+					dragMoveEnabled="true"/>
+		</s:VGroup>
+		
+		<s:VGroup>
+			<s:Label text="Activities I Like"/>
+			<s:List id="destlist" 
+					dropEnabled="true"/>
+		</s:VGroup>
+	</s:HGroup>
+	
+	<s:Button id="b1" x="85" y="139" label="Reset" click="initApp();"/>
+</local:OutputSpark>

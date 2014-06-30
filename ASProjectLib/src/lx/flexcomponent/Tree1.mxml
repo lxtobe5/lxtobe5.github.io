@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*" width="100%" height="100%">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			private var data:Object =  {id:"API",name:"APIS",child:[{id:"flash",name:"flash",child:[{id:"display",name:"display",child:[{id:"Sprite",name:"Sprite"}]}]}]};
+			[Bindable]  
+			public var expenses:ArrayCollection = new ArrayCollection([data]);
+		]]>
+	</fx:Script>
+	<mx:Tree id="tree" width="500" height="500" dataProvider="{expenses}" labelField="id"/>
+</local:OutputSpark>

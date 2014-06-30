@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*">
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			protected function myClickHandler():void{
+				Alert.show("Thanks for submitting.")
+			}
+		]]>
+	</fx:Script>
+	
+	<s:Button id="iconButton"
+			  x="10" y="10"
+			  label="Submit to"
+			  icon="@Embed('../../../resource/jpg.jpg')"
+			  click="myClickHandler();"/>
+</local:OutputSpark>

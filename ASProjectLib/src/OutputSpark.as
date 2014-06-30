@@ -11,10 +11,16 @@ package
 	public class OutputSpark extends Group
 	{
 		public var printArea:TextArea;
+		public var resource:String;
 		
 		public function traceString(content:*):void
 		{
 			printArea.text +=String(content)+"\n";
+		}
+		
+		public function dispose():void
+		{
+			
 		}
 	}
 }

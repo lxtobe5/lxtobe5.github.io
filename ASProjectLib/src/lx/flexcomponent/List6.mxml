@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*">
+	<fx:Script>
+		<![CDATA[
+			import spark.events.IndexChangeEvent;
+			
+			protected function selectionChangedHandler(event:IndexChangeEvent):void
+			{
+				var currentIndx:int = event.currentTarget.selectedIndex;
+				var currentDataItem:Object = event.currentTarget.selectedItem;
+				selIndex.text = String(currentIndx);
+				selLName.text = String(currentDataItem.lastName);
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<s:VGroup width="100%" height="100%">
+		<s:List id="myList"
+				labelField="firstName" 
+				change="selectionChangedHandler(event)">
+			<mx:ArrayCollection>
+				<fx:Object firstName="Bill" lastName="Smith" companyID="11233"/>
+				<fx:Object firstName="Dave" lastName="Jones" companyID="13455"/>
+				<fx:Object firstName="Mary" lastName="Davis" companyID="11543"/>
+				<fx:Object firstName="Debbie" lastName="Cooper" companyID="14266"/>
+			</mx:ArrayCollection>
+		</s:List>
+		
+		<s:Label text="Selected index:"/>
+		<s:TextArea id="selIndex" height="50"/>
+		
+		<s:Label text="Selected Last Name:"/>
+		<s:TextArea id="selLName" height="50"/>
+	</s:VGroup>
+</local:OutputSpark>

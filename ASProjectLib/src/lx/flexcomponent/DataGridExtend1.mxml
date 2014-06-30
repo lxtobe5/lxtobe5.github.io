@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx"
+				   xmlns:local="*" creationComplete="outputspark1_creationCompleteHandler(event)" xmlns:DataGridExtend="components.DataGridExtend.*">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.events.FlexEvent;
+			[Bindable]
+			private var al:ArrayCollection = new ArrayCollection([
+				{birthday:"07/23/1987",salary:"6000",userName:"Jim"},
+				{birthday:"07/23/1984",salary:"5500",userName:"Tom"},
+				{birthday:"07/23/1983",salary:"8000",userName:"Jane"},
+				{birthday:"07/23/1985",salary:"7000",userName:"Kite"},
+				{birthday:"07/23/1986",salary:"6000",userName:"Mike"}]);
+			
+			private function outputspark1_creationCompleteHandler(event:FlexEvent):void
+			{
+				datagridextend2.acceptList.push(datagridextend1);
+				datagridextend3.acceptList.push(datagridextend2);
+			}
+			
+		]]>
+	</fx:Script>
+	<!--扩展DataGrid为DataGridEx实现数据拖拽-->
+	<s:VGroup width="100%" height="100%">
+		<s:Label text="dragEnabled=true,dropEnabled=true,draggableColumns=true表格内，行列数据可拖动交换位置"/>
+		<DataGridExtend:DataGridExtend id="datagridextend1" width="400"
+							  dataProvider="{al}" 
+							  dragEnabled="true" 
+							  dropEnabled="true"
+							  draggableColumns="true"
+							  skinClass="spark.skins.spark.DataGridSkin">
+			<DataGridExtend:columns>
+				<s:ArrayList>
+					<s:GridColumn dataField="userName" headerText="Name"/>
+					<s:GridColumn dataField="birthday" headerText="Bithday"/>
+					<s:GridColumn dataField="salary" headerText="Salary"/>
+				</s:ArrayList>
+			</DataGridExtend:columns>
+		</DataGridExtend:DataGridExtend>
+		
+		<s:Label text="datagridextend2.acceptList.push(datagridextend1)，可接受datagridextend1拖拽的数据"/>
+		<s:Label text=" selectionMode=multipleRows，可以选中多行拖拽，交换位置"/>
+		<DataGridExtend:DataGridExtend id="datagridextend2" width="400"
+							  dragEnabled="true" 
+							  dropEnabled="true" requestedRowCount="5"
+							  selectionMode="multipleRows"
+							  skinClass="spark.skins.spark.DataGridSkin">
+			<DataGridExtend:columns>
+				<s:ArrayList>
+					<s:GridColumn dataField="userName" headerText="Name"/>
+					<s:GridColumn dataField="birthday" headerText="Bithday"/>
+					<s:GridColumn dataField="salary" headerText="Salary"/>
+				</s:ArrayList>
+			</DataGridExtend:columns>
+		</DataGridExtend:DataGridExtend>
+		
+		<s:Label text="datagridextend3.acceptList.push(datagridextend2)，可接受datagridextend2拖拽的数据"/>
+		<DataGridExtend:DataGridExtend id="datagridextend3" width="400" dragEnabled="true" dropEnabled="true" requestedRowCount="5"
+							  skinClass="spark.skins.spark.DataGridSkin">
+			<DataGridExtend:columns>
+				<s:ArrayList>
+					<s:GridColumn dataField="userName" headerText="Name"/>
+					<s:GridColumn dataField="birthday" headerText="Bithday"/>
+					<s:GridColumn dataField="salary" headerText="Salary"/>
+				</s:ArrayList>
+			</DataGridExtend:columns>
+		</DataGridExtend:DataGridExtend>
+		
+		<s:Label text="labelField=userName显示数据中的userName字段"/>
+		<s:List height="90" dragEnabled="true" dropEnabled="true" 
+				dragMoveEnabled="true"
+				labelField="userName"/>
+	</s:VGroup>
+</local:OutputSpark>

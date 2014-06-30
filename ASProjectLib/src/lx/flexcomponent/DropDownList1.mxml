@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*">
+	<s:DropDownList width="140" prompt="Select a state"> 
+		<mx:ArrayCollection>
+			<fx:String>Alabama</fx:String>
+			<fx:String>Alaska</fx:String>
+			<fx:String>Arizona</fx:String>
+			<fx:String>Arkansas</fx:String>
+			<fx:String>California</fx:String>
+		</mx:ArrayCollection>
+	</s:DropDownList>
+</local:OutputSpark>

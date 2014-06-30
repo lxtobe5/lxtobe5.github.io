@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*" width="300" height="100%">
+	<fx:Script>
+		<![CDATA[                
+			import mx.collections.ArrayCollection;
+			
+			[Bindable]
+			private var myDP:ArrayCollection = new ArrayCollection([
+				{label1:"Order #2314", quant:3, Sent:true},
+				{label1:"Order #2315", quant:3, Sent:false}     
+			]);       
+		]]>
+	</fx:Script>
+	
+	<s:DataGrid id="myDG" width="100%" 
+				dataProvider="{myDP}" 
+				variableRowHeight="true" 
+				editable="true" >
+		<s:columns>
+			<s:ArrayList>
+				<s:GridColumn dataField="label1" headerText="Order #"/>
+				<s:GridColumn dataField="quant" 
+							  headerText="Qty"
+							  itemEditor="lx.flexcomponent.DataGrid17ItemEditor1"/>
+			</s:ArrayList> 
+		</s:columns >
+	</s:DataGrid> 
+</local:OutputSpark>

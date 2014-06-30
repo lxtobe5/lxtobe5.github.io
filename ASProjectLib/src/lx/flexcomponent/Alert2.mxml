@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*">
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.events.CloseEvent;
+			
+			[Embed(source="../../../resource/jpg.jpg")] 
+			[Bindable]
+			public var iconSymbol:Class; 
+			
+			private function alertListener(eventObj:CloseEvent):void {
+				// Check to see if the OK button was pressed.
+				if (eventObj.detail==Alert.OK) {
+					myText.text = myInput.text; 
+				}
+			}
+		]]>
+	</fx:Script>
+	<s:VGroup>
+		<s:TextInput id="myInput" 
+					 width="150" 
+					 text=""/>
+		<s:Button id="myButton" 
+				  label="Copy Text"
+				  click='Alert.show("Copy Text?", "Alert",
+				  Alert.OK | Alert.CANCEL, this,
+				  alertListener, iconSymbol,  Alert.OK );'/>
+		<s:TextInput id="myText"/>
+	</s:VGroup>
+</local:OutputSpark>

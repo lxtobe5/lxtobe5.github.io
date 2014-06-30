@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:GridItemEditor xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				  xmlns:s="library://ns.adobe.com/flex/spark" 
+				  xmlns:mx="library://ns.adobe.com/flex/mx">
+	<fx:Script>
+		<![CDATA[
+			
+			// Override the setter to initialize the NumericStepper control
+			// with the cell data.
+			override public function set value(newValue:Object):void {
+				ns.value = newValue as Number;
+			}
+			
+			// Override the getter to return the current value of 
+			// the NumericStepper control.
+			// The save() method updates the data provider element for the
+			// row of the grid with this value. 
+			override public function get value():Object {
+				return ns.value;
+			}
+			
+			// Override setFocus() to shift focus to the NumericStepper.
+			override public function setFocus():void {
+				ns.setFocus();
+			}
+		]]>
+	</fx:Script>
+	
+	<s:NumericStepper id="ns" width="100%"
+					  fontWeight="bold"/>
+</s:GridItemEditor>

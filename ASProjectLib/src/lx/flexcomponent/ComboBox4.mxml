@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*">
+	<fx:Script>  
+		<![CDATA[  
+			[Bindable]
+			private var promptText:String = "Choose Game";
+			
+			/* When you set selectedIndex to -1 and remove focus, the prompt text reappears. */
+			private function resetCB():void {
+				myComboBox.selectedIndex = -1;
+			}
+		]]>  
+	</fx:Script>  
+	
+	<s:VGroup>
+		<s:ComboBox id="myComboBox" prompt="{promptText}">
+			<s:dataProvider>
+				<s:ArrayList>
+					<fx:String>Durche die Wuste</fx:String>
+					<fx:String>Samurai</fx:String>
+					<fx:String>Traumfabrik</fx:String>
+				</s:ArrayList>
+			</s:dataProvider>        
+		</s:ComboBox>
+		<s:Button label="Reset" click="resetCB()"/>
+	</s:VGroup>
+</local:OutputSpark>

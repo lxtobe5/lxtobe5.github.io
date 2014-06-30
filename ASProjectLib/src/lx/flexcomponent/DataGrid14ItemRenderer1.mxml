@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:GridItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					xmlns:s="library://ns.adobe.com/flex/spark" 
+					xmlns:mx="library://ns.adobe.com/flex/mx">
+	<s:VGroup height="150" paddingTop="10">
+		<s:Label id="albumName" 
+				 width="100%" 
+				 text="{data.Album}"/>
+		<s:Image id="albumImage"
+				 source="{data.Cover}"/>    
+	</s:VGroup>
+</s:GridItemRenderer>

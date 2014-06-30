@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*" xmlns:ns="http://flex.apache.org/experimental/ns">
+	<fx:Script>
+		<![CDATA[
+			[Bindable]
+			public var simpleDP:Array = ['0x000000', '0xFF0000', '0xFF8800',
+				'0xFFFF00', '0x88FF00', '0x00FF00', '0x00FF88', '0x00FFFF', 
+				'0x0088FF', '0x0000FF', '0x8800FF', '0xFF00FF', '0xFFFFFF'];
+		]]>    
+	</fx:Script>
+	
+	<mx:ColorPicker id="cp" dataProvider="{simpleDP}"/>
+</local:OutputSpark>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*">
+	<fx:Script>
+		<![CDATA[
+			public function myLabelFunc(item:Object):String {
+				return item.firstName + " " + item.lastName; 
+			}
+		]]>
+	</fx:Script>
+	
+	<s:List id="myList"
+			labelFunction="myLabelFunc">
+		<mx:ArrayCollection>
+			<fx:Object firstName="Bill" lastName="Smith" companyID="11233"/>
+			<fx:Object firstName="Dave" lastName="Jones" companyID="13455"/>
+			<fx:Object firstName="Mary" lastName="Davis" companyID="11543"/>
+			<fx:Object firstName="Debbie" lastName="Cooper" companyID="14266"/>
+		</mx:ArrayCollection>
+	</s:List>
+</local:OutputSpark>

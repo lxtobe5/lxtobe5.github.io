@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*">
+	<fx:Script>
+		<![CDATA[
+			import mx.events.CloseEvent;
+			
+			import spark.components.Alert;
+			// Define variable to hold the Alert object. 
+			public var myAlert:Alert;
+			
+			private function openAlert():void {
+				myAlert = Alert.show("Copy Text?", "Alert", 
+					Alert.OK | Alert.CANCEL,this,alertListener, null, Alert.OK);
+				// Set the height and width of the Alert control.
+				myAlert.height=250;
+				myAlert.width=250;
+			}
+			
+			private function alertListener(eventObj:CloseEvent):void {
+				// Check to see if the OK button was pressed.
+				if (eventObj.detail==Alert.OK) {
+					myText.text = myInput.text; 
+				}
+			}
+		]]>
+	</fx:Script>
+	<s:VGroup>
+		<s:TextInput id="myInput" 
+					 width="150" 
+					 text=""/>
+		<s:Button id="myButton" 
+				  label="Copy Text" 
+				  click="openAlert();"/>
+		<s:TextInput id="myText"/>
+	</s:VGroup>
+</local:OutputSpark>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*">
+	<s:VGroup>
+		<!-- Create a Spark ButtonBar control to navigate 
+		the ViewStack container. -->
+		<s:ButtonBar dataProvider="{myViewStack}"/>
+		
+		<!-- Define the ViewStack and the three child containers. -->
+		<mx:ViewStack id="myViewStack" 
+					  borderStyle="solid" 
+					  width="100%">
+			
+			<s:NavigatorContent id="search" label="Search">
+				<s:Label text="Search Screen"/>
+			</s:NavigatorContent>
+			
+			<s:NavigatorContent id="custInfo" label="Customer Info">
+				<s:Label text="Customer Info"/>
+			</s:NavigatorContent>
+			
+			<s:NavigatorContent id="accountInfo" label="Account Info">
+				<s:Label text="Account Info"/>
+			</s:NavigatorContent>
+		</mx:ViewStack>
+	</s:VGroup>
+</local:OutputSpark>

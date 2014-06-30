@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*">
+	<s:List> 
+		<s:dataProvider>
+			<mx:ArrayCollection>
+				<fx:String>Flash</fx:String> 
+				<fx:String>Director</fx:String> 
+				<fx:String>Dreamweaver</fx:String> 
+				<fx:String>ColdFusion</fx:String> 
+			</mx:ArrayCollection>
+		</s:dataProvider>
+	</s:List>
+</local:OutputSpark>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*" width="100%" height="100%"
+				   creationComplete="outputspark1_creationCompleteHandler(event)">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.events.FlexEvent;
+			
+			[Bindable]
+			private var initDG:ArrayCollection
+			
+			protected function outputspark1_creationCompleteHandler(event:FlexEvent):void
+			{
+				var asset1:String = resource + "/jpg.jpg";
+				var asset2:String = resource + "/png.png";
+				initDG = new ArrayCollection([
+					{Artist:'Pavement', Album:'Slanted and Enchanted', 
+						Price:11.99, Cover:asset1},
+					{Artist:'Pavement', Album:'Brighten the Corners', 
+						Price:11.99, Cover:asset2}
+				]);
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<s:DataGrid id="myGrid" 
+				dataProvider="{initDG}"
+				variableRowHeight="true">   
+		<s:columns>
+			<s:ArrayList>
+				<s:GridColumn dataField="Artist">
+					<s:itemRenderer>
+						<fx:Component>
+							<s:GridItemRenderer>
+								<s:Label id="labelDisplay" fontSize="24"/>
+							</s:GridItemRenderer>
+						</fx:Component>
+					</s:itemRenderer>    
+				</s:GridColumn>
+				<s:GridColumn dataField="Album"/>
+				<s:GridColumn dataField="Price"/>
+			</s:ArrayList>
+		</s:columns>       
+	</s:DataGrid>
+</local:OutputSpark>
