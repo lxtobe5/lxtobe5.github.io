@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:GridItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					xmlns:s="library://ns.adobe.com/flex/spark" 
+					xmlns:mx="library://ns.adobe.com/flex/mx" clipAndEnableScrolling="true"
+					creationComplete="griditemrenderer_creationCompleteHandler(event)">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			
+			import components.DataGridCheckBox.DataGridCheckBox;
+			private function checkbox_clickHandler(event:MouseEvent):void
+			{
+				DataGridCheckBox(owner).selectSwitch(checkbox.selected);
+			}
+			
+			protected function griditemrenderer_creationCompleteHandler(event:FlexEvent):void
+			{
+				if(owner is DataGridCheckBox)
+				{
+					DataGridCheckBox(owner).initHeaderItemRenderer(this);
+				}
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<s:CheckBox id="checkbox" horizontalCenter="0" verticalCenter="0" click="checkbox_clickHandler(event)"/>
+</s:GridItemRenderer>

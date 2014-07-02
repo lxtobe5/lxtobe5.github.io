@@ -14,6 +14,7 @@ package lx.api.Array
 			traceString(array.concat(1));
 			traceString(array.concat(2,3));
 			traceString(array.concat([4,5]));
+			traceString(array.concat(null));
 		}
 	}
 }

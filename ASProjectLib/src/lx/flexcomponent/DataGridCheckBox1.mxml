@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*"
+				   xmlns:DataGridCheckBox="components.DataGridCheckBox.*"
+				   creationComplete="outputspark_creationCompleteHandler(event)">
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			private var count:uint = 0;
+			
+			private function get createData():Object
+			{
+				count++;
+				return {bookName: "书名"+count, bookType: "类型"+count};
+			}
+			
+			private function newBtn_clickHandler(event:MouseEvent):void
+			{
+				datagrid1.addDataAt(createData,datagrid1.dataIndex);
+			}
+			
+			private function delBtn_clickHandler(event:MouseEvent):void
+			{
+				datagrid1.removeSelected();
+			}
+			
+			private function del2Btn_clickHandler(event:MouseEvent):void
+			{
+				datagrid2.removeSelected();
+			}
+			
+			protected function outputspark_creationCompleteHandler(event:FlexEvent):void
+			{
+				datagrid2.acceptList.push(datagrid1);
+			}
+			
+		]]>
+	</fx:Script>
+	<s:VGroup width="100%" height="100%" >
+		<s:HGroup width="100%" height="100%" >
+			<s:Button id="newBtn" label="插入数据" click="newBtn_clickHandler(event)"/>
+			<s:Button id="delBtn" label="删除数据" click="delBtn_clickHandler(event)"/>
+		</s:HGroup>  
+		
+		<DataGridCheckBox:DataGridCheckBox id="datagrid1" width="400" requestedMinRowCount="5"
+										   skinClass="spark.skins.spark.DataGridSkin"
+										   dragEnabled="true" dropEnabled="true">
+			<DataGridCheckBox:columns>
+				<s:ArrayList>
+					<s:GridColumn width="25" resizable="false" sortable="false" editable="false" 
+								  itemRenderer="components.DataGridCheckBox.skins.CheckBoxItemRenderer" 
+								  headerRenderer="components.DataGridCheckBox.skins.CheckBoxHeaderItemRenderer"/>
+					<s:GridColumn width="80" headerText="名称" dataField="bookName" editable="true"/>
+					<s:GridColumn headerText="类型" dataField="bookType" editable="true"/>
+				</s:ArrayList>
+			</DataGridCheckBox:columns>
+		</DataGridCheckBox:DataGridCheckBox>
+		
+		<s:Label text="datagrid1可编辑，datagrid2不可编辑单元格"/>
+		<s:Button id="del2Btn" label="删除数据" click="del2Btn_clickHandler(event)"/>
+		<DataGridCheckBox:DataGridCheckBox id="datagrid2" width="400" requestedMinRowCount="5"
+										   skinClass="spark.skins.spark.DataGridSkin"
+										   dragEnabled="true" dropEnabled="true">
+			<DataGridCheckBox:columns>
+				<s:ArrayList>
+					<s:GridColumn width="25" resizable="false" sortable="false" editable="false" 
+								  itemRenderer="components.DataGridCheckBox.skins.CheckBoxItemRenderer" 
+								  headerRenderer="components.DataGridCheckBox.skins.CheckBoxHeaderItemRenderer"/>
+					<s:GridColumn width="80" headerText="名称" dataField="bookName" editable="false"/>
+					<s:GridColumn headerText="类型" dataField="bookType" editable="false"/>
+				</s:ArrayList>
+			</DataGridCheckBox:columns>
+		</DataGridCheckBox:DataGridCheckBox>
+	</s:VGroup>  
+</local:OutputSpark>

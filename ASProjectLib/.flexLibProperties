@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="false" useMultiPlatformConfig="false" version="3">
   <includeClasses>
+    <classEntry path="LibVersion"/>
     <classEntry path="Output"/>
     <classEntry path="lx.api.Array.Array_method_concat"/>
     <classEntry path="lx.api.Array.Array_method_every"/>
@@ -195,6 +196,8 @@
     <classEntry path="lx.flexcomponent.ColorPicker1"/>
     <classEntry path="lx.flexcomponent.ColorPicker2"/>
     <classEntry path="lx.flexcomponent.VideoPlayer1"/>
+    <classEntry path="lx.flexcomponent.TileGroup1"/>
+    <classEntry path="lx.flexcomponent.DataGridCheckBox1"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

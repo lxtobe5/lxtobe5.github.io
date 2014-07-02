@@ -2,7 +2,9 @@ package components.DataGridExtend
 {
 	import flash.display.DisplayObject;
 	import flash.geom.Point;
+	import flash.utils.ByteArray;
 	
+	import mx.collections.ArrayCollection;
 	import mx.collections.ArrayList;
 	import mx.core.DragSource;
 	import mx.core.IFactory;
@@ -25,6 +27,7 @@ package components.DataGridExtend
 		public function DataGridExtend()
 		{
 			super();
+			dataProvider = new ArrayCollection();
 			addEventListener(GridEvent.GRID_MOUSE_DRAG, startDragDrop);
 		}
 		
@@ -42,6 +45,17 @@ package components.DataGridExtend
 		override public function get dragEnabled():Boolean
 		{
 			return _dragEnabled;
+		}
+		
+		/**
+		 * 得到数据索引
+		 * @return 
+		 * 
+		 */		
+		public function get dataIndex():int
+		{
+			//选中目录时，添加新行在选中行的下一行，没有选中目录时，默认添加在最后一行
+			return selectedIndex<0 ? dataProvider.length : selectedIndex+1;
 		}
 		
 		override public function set dragEnabled(value:Boolean):void
@@ -458,10 +472,21 @@ package components.DataGridExtend
 				
 				for (i = 0; i < count; i++)
 				{
-					dataProvider.addItemAt(data[i], dropIndex++);
+					dropIndex = dataProviderLength<dropIndex ? dataProviderLength : dropIndex;
+					var object:Object = clone(data[i]);
+					dataProvider.addItemAt(object, dropIndex++);
 				}
 			}
 			cleanUpRowDropIndicator();
+		}
+		
+		private function clone(object:Object):Object
+		{
+			var ba:ByteArray=new ByteArray();
+			ba.writeObject(object);
+			ba.position=0;
+			
+			return ba.readObject();;
 		}
 		
 		private function cleanUpDropIndicator():void
