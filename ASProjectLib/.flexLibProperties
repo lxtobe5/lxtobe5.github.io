@@ -198,6 +198,18 @@
     <classEntry path="lx.flexcomponent.VideoPlayer1"/>
     <classEntry path="lx.flexcomponent.TileGroup1"/>
     <classEntry path="lx.flexcomponent.DataGridCheckBox1"/>
+    <classEntry path="lx.api.flash.geom.ColorTransform.ColorTransform_method_ColorTransform"/>
+    <classEntry path="lx.api.flash.display.Loader.Loader_method_1_load"/>
+    <classEntry path="lx.flexcomponent.AreaChart1"/>
+    <classEntry path="lx.flexcomponent.BarChart1"/>
+    <classEntry path="lx.flexcomponent.BubbleChart1"/>
+    <classEntry path="lx.flexcomponent.ColumnChart1"/>
+    <classEntry path="lx.flexcomponent.CandlestickChart1"/>
+    <classEntry path="lx.flexcomponent.HLOCChart1"/>
+    <classEntry path="lx.flexcomponent.PlotChart1"/>
+    <classEntry path="lx.flexcomponent.LineChart1"/>
+    <classEntry path="lx.flexcomponent.PieChart1"/>
+    <classEntry path="lx.flexcomponent.Form1"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

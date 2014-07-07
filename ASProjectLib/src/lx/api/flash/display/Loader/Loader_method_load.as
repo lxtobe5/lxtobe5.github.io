@@ -38,7 +38,7 @@ package lx.api.flash.display.Loader
 			
 			select = 0;
 			
-			loadDomain = 4;
+			loadDomain =  2;
 		}
 		
 		private function set loadDomain(value:int):void

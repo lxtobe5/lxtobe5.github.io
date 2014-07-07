@@ -1,9 +1,0 @@
-DataGrid1.mxml : [Bindable] 的使用，Array包含Object作为数据类型
-DataGrid2.mxml : DataGrid内部元素mxml标签的写法
-DataGrid3.mxml : 用XMLListConllection为DataGrid提供数据
-DataGrid4.mxml : XML、XMLList、XMLListCollection、ArrayCollection关系转换
-DataGrid5.mxml : 用DataItem赋值数据
-DataGrid6.mxml : 添加删除列
-DataGrid7.mxml : 表格的GridEvent事件，按住Ctrl多选
-DataGrid8.mxml : 表格的GridSelectionEvent事件
-DataGrid9.mxml : 表格多选后，按住Ctrl+C，得到单元格数据，复制到系统剪贴板

@@ -1,0 +1,20 @@
+<?xml version="1.0"encoding="utf-8"?>
+<xml>
+<site>
+<item>
+<id>1</id>
+<title>西安</title>
+<link>陕西</link>
+</item>
+<item>
+<id>2</id>
+<title>南宁</title>
+<link>广西</link>
+</item>
+<item>
+<id>3</id>
+<title>广州</title>
+<link>广东</link>
+</item>
+</site>
+</xml>
