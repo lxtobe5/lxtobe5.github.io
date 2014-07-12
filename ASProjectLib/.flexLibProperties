@@ -210,6 +210,11 @@
     <classEntry path="lx.flexcomponent.LineChart1"/>
     <classEntry path="lx.flexcomponent.PieChart1"/>
     <classEntry path="lx.flexcomponent.Form1"/>
+    <classEntry path="lx.flexcomponent.Transition1"/>
+    <classEntry path="lx.flexcomponent.ButtonBar2"/>
+    <classEntry path="lx.api.flash.media.StageWebView.StageWebView_method_loadURL"/>
+    <classEntry path="lx.flexcomponent.Linear1"/>
+    <classEntry path="lx.flexcomponent.LinearGradient1"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

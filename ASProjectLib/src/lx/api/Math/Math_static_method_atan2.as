@@ -1,5 +1,9 @@
 package lx.api.Math
 {
+	import flash.display.Sprite;
+	import flash.events.Event;
+	import flash.geom.Point;
+
 	/**
 	 * 
 	 * @author Liuxin
@@ -7,6 +11,8 @@ package lx.api.Math
 	 */	
 	public class Math_static_method_atan2 extends Output
 	{
+		private var circle:Sprite = new Sprite();
+		private var rotationPoint:Point = new Point(200,200);
 		override public function run():void
 		{
 			var k:Number;
@@ -15,6 +21,25 @@ package lx.api.Math
 				k = Math.round(i*10)/10;
 				traceString('atan2('+k+','+k*10+'):'+Math.atan2(k,k*5));
 			}
+			
+			circle.graphics.lineStyle(1);
+			circle.graphics.drawRect(0,0,100,100);
+			tracePattern(circle);
+			circle.x = 100;
+			circle.y = 100;
+			stage.addEventListener(Event.ENTER_FRAME,onEnterFrame);
+		}
+		
+		private function onEnterFrame(e:Event):void
+		{
+			var dx:Number = stage.mouseX - circle.x; 
+			var dy:Number = stage.mouseY - circle.y; 
+			circle.rotation = Math.atan2(dy, dx) * 180 / Math.PI; 
+		}
+		
+		override public function dispose():void
+		{
+			stage.removeEventListener(Event.ENTER_FRAME,onEnterFrame);
 		}
 	}
 }
