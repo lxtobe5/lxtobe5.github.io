@@ -4,7 +4,6 @@
 				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*">
 	<fx:Script>
 		<![CDATA[
-			import spark.events.IndexChangeEvent;
 			// Add data item, and button, to the ButtonBar.
 			private function addFlexToDP():void {
 				myBB.dataProvider.addItem("Flex");
@@ -18,15 +17,10 @@
 				addFlex.enabled=true;
 				removeFlex.enabled=false;
 			}
-			
-			private function myBB_changeHandler(e:IndexChangeEvent):void
-			{
-				traceString("selectedIndex:"+myBB.selectedIndex);
-			}
 		]]>
 	</fx:Script>
 	<s:VGroup width="100%" height="100%">
-		<s:ButtonBar id="myBB" change="myBB_changeHandler(event)">  
+		<s:ButtonBar id="myBB">  
 			<mx:ArrayCollection>
 				<fx:String>Flash</fx:String> 
 				<fx:String>Director</fx:String> 
