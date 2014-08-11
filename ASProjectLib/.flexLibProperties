@@ -215,6 +215,46 @@
     <classEntry path="lx.api.flash.media.StageWebView.StageWebView_method_loadURL"/>
     <classEntry path="lx.flexcomponent.Linear1"/>
     <classEntry path="lx.flexcomponent.LinearGradient1"/>
+    <classEntry path="lx.api.flash.display.Sprite.Sprite_attribute_mask"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.ProductCreatorExample.AbstractFactory"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.ProductCreatorExample.ProductCreatorExample"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.DocumentCreatorExample.DocumentCreator"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.DocumentCreatorExample.Letter"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.DocumentCreatorExample.Resume"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.DocumentCreatorExample.CreatorA"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.DocumentCreatorExample.CreatorB"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.DocumentCreatorExample.LetterA"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.DocumentCreatorExample.LetterB"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.DocumentCreatorExample.ResumeA"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.DocumentCreatorExample.ResumeB"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.DocumentCreatorExample.DocumentCreatorExample"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.IKetchenFactory"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.ITableWare"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.IFood"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.KetchenA"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.KetchenB"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.Milk"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.Spoon"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.Knife"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.Fork"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.Meat"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.Cake"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.KetchenC"/>
+    <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.KetchenExample"/>
+    <classEntry path="lx.designpatterns.Proxy.ProductExample.IProduct"/>
+    <classEntry path="lx.designpatterns.Proxy.ProductExample.Product"/>
+    <classEntry path="lx.designpatterns.Proxy.ProductExample.ProductProxy"/>
+    <classEntry path="lx.designpatterns.Proxy.ProductExample.ProductExample"/>
+    <classEntry path="lx.designpatterns.Proxy.SearchExample.BaiduSearchProxy"/>
+    <classEntry path="lx.designpatterns.Proxy.SearchExample.DataEvent"/>
+    <classEntry path="lx.designpatterns.Proxy.SearchExample.SearchExample"/>
+    <classEntry path="lx.api.flash.utils.Timer.Timer_method_Timer"/>
+    <classEntry path="lx.designpatterns.Strategy.CashExample.Cash"/>
+    <classEntry path="lx.designpatterns.Strategy.CashExample.CashNormal"/>
+    <classEntry path="lx.designpatterns.Strategy.CashExample.CashRebate"/>
+    <classEntry path="lx.designpatterns.Strategy.CashExample.CashReturn"/>
+    <classEntry path="lx.designpatterns.Strategy.CashExample.ContextCash"/>
+    <classEntry path="lx.designpatterns.Strategy.CashExample.CashExample"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
