@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:OutputSpark xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:local="*" width="400" height="400">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			
+			import lx.api.flash.html.HTMLLoader.HTMLHost_extends;
+			
+			private function content_creationCompleteHandler(event:FlexEvent):void
+			{
+				content.htmlHost = new HTMLHost_extends();
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<mx:HTML id="content" width="100%" location="http://www.163.com" height="90%" creationComplete="content_creationCompleteHandler(event)" horizontalCenter="0"/>
+</local:OutputSpark>

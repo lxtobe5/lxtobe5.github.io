@@ -255,6 +255,9 @@
     <classEntry path="lx.designpatterns.Strategy.CashExample.CashReturn"/>
     <classEntry path="lx.designpatterns.Strategy.CashExample.ContextCash"/>
     <classEntry path="lx.designpatterns.Strategy.CashExample.CashExample"/>
+    <classEntry path="lx.flexcomponent.HTML1"/>
+    <classEntry path="lx.api.flash.html.HTMLLoader.HTMLLoader_method_load"/>
+    <classEntry path="lx.api.flash.html.HTMLLoader.HTMLHost_extends"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
