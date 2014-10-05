@@ -7,7 +7,7 @@
 		<![CDATA[
 			import mx.events.FlexEvent;
 			
-			import lx.api.flash.html.HTMLLoader.HTMLHost_extends;
+			import lx.api.flash.html.HTMLHost.HTMLHost_extends;
 			
 			private function content_creationCompleteHandler(event:FlexEvent):void
 			{

@@ -15,6 +15,7 @@ package lx.api.flash.html.HTMLLoader
 		override public function run():void
 		{
 			var html:HTMLLoader = new HTMLLoader();
+			//防点击链接遇到'_blank'无响应
 			html.htmlHost = new HTMLHost_extends();
 			html.width = 400;
 			html.height = 400;

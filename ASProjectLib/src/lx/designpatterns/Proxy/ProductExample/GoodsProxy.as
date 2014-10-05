@@ -5,15 +5,15 @@ package lx.designpatterns.Proxy.ProductExample
 	 * @author Liuxin
 	 * 
 	 */	
-	public class ProductProxy implements IProduct
+	public class GoodsProxy implements IGoods
 	{
 		private var _xml:XML;
-		private var _product:Product;
+		private var _product:Goods;
 		
-		public function ProductProxy(xml:XML)
+		public function GoodsProxy(xml:XML)
 		{
 			_xml = xml;
-			_product = new Product();
+			_product = new Goods();
 		}
 		
 		public function getPrice():Number

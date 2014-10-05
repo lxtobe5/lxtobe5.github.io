@@ -18,8 +18,3 @@ package lx.designpatterns.AbstractFactory.DocumentCreatorExample
 		}
 	}
 }
-/************************************************************************************************
- CreatorA,CreatorB继承DocumentCreator
- LetterA,LetterB继承Letter
- ResumeA,ResumeB继承Resume
- ************************************************************************************************/

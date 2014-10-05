@@ -21,7 +21,3 @@ package lx.designpatterns.AbstractFactory.ProductCreatorExample
 		}
 	}
 }
-/************************************************************************************************
-FactoryA,FactoryB继承AbstractFactory
-ProductA,ProductB实现IProduct
- ************************************************************************************************/

@@ -5,7 +5,7 @@ package lx.designpatterns.Proxy.ProductExample
 	 * @author Liuxin
 	 * 
 	 */	
-	public interface IProduct
+	public interface IGoods
 	{
 		function getPrice():Number;
 		function getTitle():String;

@@ -241,13 +241,13 @@
     <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.Cake"/>
     <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.KetchenC"/>
     <classEntry path="lx.designpatterns.AbstractFactory.KetchenExample.KetchenExample"/>
-    <classEntry path="lx.designpatterns.Proxy.ProductExample.IProduct"/>
-    <classEntry path="lx.designpatterns.Proxy.ProductExample.Product"/>
-    <classEntry path="lx.designpatterns.Proxy.ProductExample.ProductProxy"/>
-    <classEntry path="lx.designpatterns.Proxy.ProductExample.ProductExample"/>
+    <classEntry path="lx.designpatterns.Proxy.ProductExample.IGoods"/>
+    <classEntry path="lx.designpatterns.Proxy.ProductExample.Goods"/>
+    <classEntry path="lx.designpatterns.Proxy.ProductExample.GoodsProxy"/>
+    <classEntry path="lx.designpatterns.Proxy.ProductExample.GoodsProxyExample"/>
     <classEntry path="lx.designpatterns.Proxy.SearchExample.BaiduSearchProxy"/>
     <classEntry path="lx.designpatterns.Proxy.SearchExample.DataEvent"/>
-    <classEntry path="lx.designpatterns.Proxy.SearchExample.SearchExample"/>
+    <classEntry path="lx.designpatterns.Proxy.SearchExample.SearchProxyExample"/>
     <classEntry path="lx.api.flash.utils.Timer.Timer_method_Timer"/>
     <classEntry path="lx.designpatterns.Strategy.CashExample.Cash"/>
     <classEntry path="lx.designpatterns.Strategy.CashExample.CashNormal"/>
@@ -257,7 +257,27 @@
     <classEntry path="lx.designpatterns.Strategy.CashExample.CashExample"/>
     <classEntry path="lx.flexcomponent.HTML1"/>
     <classEntry path="lx.api.flash.html.HTMLLoader.HTMLLoader_method_load"/>
+    <classEntry path="lx.api.flash.system.Capabilities_static_attribute"/>
+    <classEntry path="lx.designpatterns.Proxy.ArrayExample.ProxyArray"/>
+    <classEntry path="lx.designpatterns.Proxy.ArrayExample.ArrayExample"/>
     <classEntry path="lx.api.flash.html.HTMLLoader.HTMLHost_extends"/>
+    <classEntry path="lx.designpatterns.Decorator.BeverageExample.BeverageExample"/>
+    <classEntry path="lx.designpatterns.Decorator.BeverageExample.Espresso"/>
+    <classEntry path="lx.designpatterns.Decorator.BeverageExample.IBeverage"/>
+    <classEntry path="lx.designpatterns.Decorator.BeverageExample.CondimentDecorator"/>
+    <classEntry path="lx.designpatterns.Decorator.BeverageExample.Mocha"/>
+    <classEntry path="lx.designpatterns.Decorator.BeverageExample.Soy"/>
+    <classEntry path="lx.designpatterns.State.HeroExample.HeroExample"/>
+    <classEntry path="lx.designpatterns.State.HeroExample.IHeroState"/>
+    <classEntry path="lx.designpatterns.State.HeroExample.KillState"/>
+    <classEntry path="lx.designpatterns.State.TaskExample.Task"/>
+    <classEntry path="lx.designpatterns.State.HeroExample.HeroContext"/>
+    <classEntry path="lx.designpatterns.State.HeroExample.RunState"/>
+    <classEntry path="lx.designpatterns.Command.LightExample.ICommand"/>
+    <classEntry path="lx.designpatterns.Command.LightExample.Light"/>
+    <classEntry path="lx.designpatterns.Command.LightExample.LightExample"/>
+    <classEntry path="lx.designpatterns.Command.LightExample.TurnOnCommand"/>
+    <classEntry path="lx.designpatterns.Command.LightExample.Invoker"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

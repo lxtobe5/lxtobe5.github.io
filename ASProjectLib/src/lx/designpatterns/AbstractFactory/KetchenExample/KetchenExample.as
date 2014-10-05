@@ -23,8 +23,3 @@ package lx.designpatterns.AbstractFactory.KetchenExample
 		}
 	}
 }
-/************************************************************************************************
- Cake, Meat, Milk实现IFood
- Fork, Knife, Spoon实现ITableWare
- KetchenA, KetchenB, KetchenC实现IKetchenFactory
- ************************************************************************************************/

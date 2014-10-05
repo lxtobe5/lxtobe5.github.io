@@ -9,7 +9,7 @@ package
 	{
 		private const Major:int = 1;
 		private const Minor:int = 0;
-		private const Build:int = 3;
+		private const Build:int = 4;
 		
 		public function getVersion():String
 		{

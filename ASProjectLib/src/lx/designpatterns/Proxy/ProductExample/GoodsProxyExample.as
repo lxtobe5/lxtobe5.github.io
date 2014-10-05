@@ -5,9 +5,9 @@ package lx.designpatterns.Proxy.ProductExample
 	 * @author Liuxin
 	 * 
 	 */	
-	public class ProductExample extends Output
+	public class GoodsProxyExample extends Output
 	{
-		public function ProductExample()
+		public function GoodsProxyExample()
 		{
 			super();
 		}
@@ -20,7 +20,7 @@ package lx.designpatterns.Proxy.ProductExample
 					<price>19.95</price>
 				</product>;
 			
-			var product:IProduct = new ProductProxy(xml);
+			var product:IGoods = new GoodsProxy(xml);
 			traceString(product.getTitle()+"- - $" +product.getPrice());
 
 		}

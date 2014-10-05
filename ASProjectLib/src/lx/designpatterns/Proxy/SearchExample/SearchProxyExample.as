@@ -7,7 +7,7 @@ package lx.designpatterns.Proxy.SearchExample
 	 * @author Liuxin
 	 * 
 	 */	
-	public class SearchExample extends Output
+	public class SearchProxyExample extends Output
 	{
 		
 		override public function run():void

@@ -17,7 +17,7 @@ package lx.api.flash.media.StageWebView
 			webView.stage = this.stage;
 			webView.viewPort = new Rectangle(800,100, 300, 300);
 			
-			webView.loadURL( "http://www.example.com" );
+			webView.loadURL( "http://www.adobe.com" );
 		}
 		
 		override public function dispose():void

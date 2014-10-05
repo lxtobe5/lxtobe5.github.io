@@ -5,13 +5,13 @@ package lx.designpatterns.Proxy.ProductExample
 	 * @author Liuxin
 	 * 
 	 */	
-	public class Product implements IProduct
+	public class Goods implements IGoods
 	{
 		
 		private var _price:Number;
 		private var _title:String;
 		
-		public function Product()
+		public function Goods()
 		{
 		}
 		
