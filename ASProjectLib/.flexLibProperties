@@ -270,14 +270,19 @@
     <classEntry path="lx.designpatterns.State.HeroExample.HeroExample"/>
     <classEntry path="lx.designpatterns.State.HeroExample.IHeroState"/>
     <classEntry path="lx.designpatterns.State.HeroExample.KillState"/>
-    <classEntry path="lx.designpatterns.State.TaskExample.Task"/>
     <classEntry path="lx.designpatterns.State.HeroExample.HeroContext"/>
     <classEntry path="lx.designpatterns.State.HeroExample.RunState"/>
-    <classEntry path="lx.designpatterns.Command.LightExample.ICommand"/>
-    <classEntry path="lx.designpatterns.Command.LightExample.Light"/>
-    <classEntry path="lx.designpatterns.Command.LightExample.LightExample"/>
-    <classEntry path="lx.designpatterns.Command.LightExample.TurnOnCommand"/>
-    <classEntry path="lx.designpatterns.Command.LightExample.Invoker"/>
+    <classEntry path="lx.designpatterns.Command.DoitExample.ICommand"/>
+    <classEntry path="lx.designpatterns.Command.DoitExample.ConcreteCommand"/>
+    <classEntry path="lx.designpatterns.Command.DoitExample.Invoker"/>
+    <classEntry path="lx.designpatterns.Command.DoitExample.Receiver"/>
+    <classEntry path="lx.designpatterns.Command.DoitExample.DoitExample"/>
+    <classEntry path="lx.designpatterns.Command.AudioPlayerExample.AudioPlayerExample"/>
+    <classEntry path="lx.designpatterns.Command.AudioPlayerExample.AudioPlayer"/>
+    <classEntry path="lx.designpatterns.Command.AudioPlayerExample.ICommand"/>
+    <classEntry path="lx.designpatterns.Command.AudioPlayerExample.PlayCommand"/>
+    <classEntry path="lx.designpatterns.Command.AudioPlayerExample.StopCommand"/>
+    <classEntry path="lx.designpatterns.Command.AudioPlayerExample.Keypad"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
