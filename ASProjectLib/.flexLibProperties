@@ -283,6 +283,24 @@
     <classEntry path="lx.designpatterns.Command.AudioPlayerExample.PlayCommand"/>
     <classEntry path="lx.designpatterns.Command.AudioPlayerExample.StopCommand"/>
     <classEntry path="lx.designpatterns.Command.AudioPlayerExample.Keypad"/>
+    <classEntry path="lx.designpatterns.Chain.FilterExample.IFilter"/>
+    <classEntry path="lx.designpatterns.Chain.FilterExample.RequestString"/>
+    <classEntry path="lx.designpatterns.Chain.FilterExample.ResponseString"/>
+    <classEntry path="lx.designpatterns.Chain.FilterExample.FilterChain"/>
+    <classEntry path="lx.designpatterns.Chain.FilterExample.FaceFilter"/>
+    <classEntry path="lx.designpatterns.Chain.FilterExample.HTMLFilter"/>
+    <classEntry path="lx.designpatterns.Chain.FilterExample.SesitiveFilter"/>
+    <classEntry path="lx.designpatterns.Chain.FilterExample.FilterExample"/>
+    <classEntry path="lx.designpatterns.Bridge.RoadExample.AbstractCar"/>
+    <classEntry path="lx.designpatterns.Bridge.RoadExample.AbstractRoad"/>
+    <classEntry path="lx.designpatterns.Bridge.RoadExample.Bus"/>
+    <classEntry path="lx.designpatterns.Bridge.RoadExample.Car"/>
+    <classEntry path="lx.designpatterns.Bridge.RoadExample.SpeedWay"/>
+    <classEntry path="lx.designpatterns.Bridge.RoadExample.Street"/>
+    <classEntry path="lx.designpatterns.Bridge.RoadExample.RoadExample"/>
+    <classEntry path="lx.designpatterns.Observer.SubscribeExample.SubscribeExample"/>
+    <classEntry path="lx.designpatterns.Observer.SubscribeExample.SubscribeReceiver"/>
+    <classEntry path="lx.designpatterns.Observer.SubscribeExample.SubscribeSender"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
