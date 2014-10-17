@@ -301,6 +301,13 @@
     <classEntry path="lx.designpatterns.Observer.SubscribeExample.SubscribeExample"/>
     <classEntry path="lx.designpatterns.Observer.SubscribeExample.SubscribeReceiver"/>
     <classEntry path="lx.designpatterns.Observer.SubscribeExample.SubscribeSender"/>
+    <classEntry path="lx.designpatterns.Adapter.SocketExample.SocketExample"/>
+    <classEntry path="lx.designpatterns.Adapter.SocketExample.DBHotel"/>
+    <classEntry path="lx.designpatterns.Adapter.SocketExample.IGBSocket"/>
+    <classEntry path="lx.designpatterns.Adapter.SocketExample.IDBSocket"/>
+    <classEntry path="lx.designpatterns.Adapter.SocketExample.DBSocket"/>
+    <classEntry path="lx.designpatterns.Adapter.SocketExample.GBSocket"/>
+    <classEntry path="lx.designpatterns.Adapter.SocketExample.SocketAdapter"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
